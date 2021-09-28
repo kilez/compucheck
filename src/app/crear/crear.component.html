@@ -1,0 +1,107 @@
+
+
+<br><br>
+<div class="card text-white bg-dark mb-3 mx-5" style="max-width: 75rem;">
+    <div class="card-header">Nueva Factura
+      <div  mx20 my-20>
+        Fecha : {{factura.fecha| date:'mediumDate'}} 
+      </div>
+    </div>
+         
+    <div class="card-body">
+      <h3 class="card-title" >Factura : {{factura.referencia}}  </h3>
+      
+    
+<form class="row g-3 text-white ">
+
+    <div class="col-auto">
+      <label style="color:white;" >Nombre</label>
+      <input type="text" class="form-control" name="nombre" id="nombre" [(ngModel)]="facturaN.nombre" >
+    </div>
+
+    <div class="col">
+        <label style="color:white;" >Direccion</label>
+        <input type="text" class="form-control" id="direccion"
+        name="direccion" [(ngModel)]="facturaN.direccion"
+        style=" padding: 6px 20px;">
+    </div>
+    <div class="col-auto">
+      <label style="color:white;" >Telefono</label>
+      <input type="text" class="form-control" id="telefono"
+      name="telefono" style=" padding: 6px 20px;"
+      [(ngModel)]="facturaN.telefono">
+    </div>
+    
+  </form>
+ <br>
+  <form class="row g-3 text-white ">
+
+    <div class="col-auto">
+      <label style="color:white;" >vehiculo</label>
+      <input type="vehiculo" class="form-control" name="vehiculo"
+      id="vehiculo" [(ngModel)]="facturaN.vehiculo" >
+    </div>
+  
+    <div class="col-auto">
+        <label style="color:white;" >Marca</label>
+        <input type="marca" class="form-control" id="marca" 
+        name="marca" style=" padding: 6px 20px;" 
+        [(ngModel)]="facturaN.marca">
+    </div>
+    <div class="col-auto">
+      <label style="color:white;" >Motor</label>
+      <input type="motor" class="form-control" id="motor" name="motor"
+      style=" padding: 6px 20px;" [(ngModel)]="facturaN.motor">
+    </div>
+
+    <div class="col-auto">
+      <label style="color:white;" >Año</label>
+      <input type="ano" class="form-control" id="ano" name="ano"
+      [(ngModel)]="facturaN.ano"  style=" padding: 6px 20px;">
+    </div>
+    
+  </form>
+  <br>
+  <form class="row g-3 text-white ">
+
+    <div class="col-auto">
+      <label style="color:white;" >Placas</label>
+      <input type="placas" class="form-control" id="placas" name="placas"
+      [(ngModel)]="facturaN.placas" >
+    </div>
+  
+    <div class="col-auto">
+        <label style="color:white;" >Falla</label>
+        <input type="falla" class="form-control" id="falla" name="falla"
+        [(ngModel)]="facturaN.falla" style=" padding: 6px 20px;">
+
+    </div>
+    <div class="col">
+      <label style="color:white;" >Descripcion</label>
+      <input type="descripcion" class="form-control" id="descripcion" name="descripcion"
+       [(ngModel)]="facturaN.Descripcion" style=" padding: 6px 20px;">
+    </div>
+    
+  </form>
+  
+  <br>
+  <form class="row g-3 text-white ">
+
+    <div class="col">
+      <label style="color:white;" >Diagnostico</label>
+      <input type="Diagnostico" name="Diagnostico" class="form-control" id="Diagnostico" 
+      [(ngModel)]="facturaN.Diagnostico" >
+    </div>
+  
+    <div class="col">
+        <label style="color:white;" >Solucion</label>
+        <input type="solucion" name="solucion" 
+        [(ngModel)]="facturaN.solucion" class="form-control" id="solucion"style=" padding: 6px 20px;">
+    </div>
+    
+  </form>
+<br><br>
+<button class="btn-primary btn"  type="button" (click)="crear()">Crear</button>
+
+
+</div>

@@ -1,0 +1,60 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border:  #140010; ;
+  background: hsl(253, 72%, 27%);
+  background-color: rgba(29, 28, 28, 0.877);
+  border-radius: 10px;
+  font: oblique 120% sans-serif bold;
+  
+}
+
+h2{
+font: oblique 200% Courier bold;
+
+}
+
+th {
+  
+  border-bottom: 5px solid #11100e;
+  color: antiquewhite;
+  font-weight: 800;
+font-size: 4mm;
+  
+}
+
+td.mat-cell { 
+  padding: 20px 0;
+  border : none;
+  color: antiquewhite;
+  
+}
+
+tr.mat-row {
+  
+  font-weight: 100s;
+  color: antiquewhite;
+  
+}
+
+.logo {float:left;
+  position: relative;
+   left: 15px;
+   background-color: #140010;
+   color: white;
+   outline-color: antiquewhite;
+
+   padding-right: 39.5%;
+   border-radius: 7px;
+   
+   border-left-color: aqua;
+border: black;
+}
+
+
+
+.bot
+{
+  background-color: rgb(255, 94, 0);
+}
+
