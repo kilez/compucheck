@@ -19,14 +19,19 @@ export class HeaderComponent implements OnInit {
   data : Factura[] =[];
 
 
-  constructor (private servicio : FacturaServiceService,
-               private router : Router) { }
+  constructor (public servicio : FacturaServiceService,
+               private router : Router,) { }
 
   ngOnInit(): void {
   }
 
 
-buscar(){
+buscar(termino: string){
+  if(termino.length <1 ){
+    return;
+  }
+
+  this.router.navigate(['/busqueda',termino]);
   //this.termino = this.factura.referencia;
   //this.router.navigate(['/busqueda',this.termino]);
 /*  

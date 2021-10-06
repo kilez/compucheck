@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "angular-html-13676",
+    "compucheck": "compu-check"
+  },
+  "targets": {}
+}

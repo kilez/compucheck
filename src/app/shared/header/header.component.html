@@ -1,28 +1,38 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark module-border-wrap " style="border-radius: 3px">
-  <div class="container-fluid module">
-    <a class="navbar-brand" href="#"><img src="assets/imagenes/compucheck.jpg" width="110" height="40" alt=""></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"routerLink="/lista">Facturas</a>
+<header class="ae-container-fluid ae-container-fluid--full rk-header ">
+  <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
+  <label for="mobile-menu">
+    <svg>
+      <use xlink:href="assets/img/symbols.svg#bar"></use>
+    </svg>
+    <svg>
+      <use xlink:href="assets/img/symbols.svg#bar"></use>
+    </svg>
+    <svg>
+      <use xlink:href="assets/img/symbols.svg#bar"></use>
+    </svg>
+  </label>
+  <div class="ae-container-fluid rk-topbar">
+    <h1 class="rk-logo"><a ><img src="assets/imagenes/compucheck2.jpg" width="110" height="40" alt=""></a></h1>
+    <nav class="rk-navigation">
+      <ul class="rk-menu">
+        <li routerLinkActive="active" class="rk-menu__item"><a routerLink="/lista" class="rk-menu__link">Facturas</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" routerLink="/crear">Crear Folio :D</a>
+        <li routerLinkActive="active" class="rk-menu__item"><a routerLink="/crear" class="rk-menu__link">Crear</a>
         </li>
-        
-
       </ul>
-      <form class="d-flex">
-        <input [(ngModel)]= "factura.referencia" class="form-control me-2" type="text" name="referencia" placeholder="Buscar Folio" aria-label="Search">
-        <button class="btn btn-outline-success" [routerLink]="['/busqueda',factura.referencia]"  (click)="buscar()" type="submit">Buscar</button>
-      </form>
-    </div>
+
+      <div class="rk-search">
+        <input type="text"
+        (keyup.enter)="buscar(txtbuscar.value)"
+        placeholder="Buscar..." id="urku-search" class="rk-search-field" #txtbuscar
+        [(ngModel)]= "factura.referencia" >
+        <label for="urku-search">
+          <svg>
+            <use xlink:href="assets/img/symbols.svg#icon-search"></use>
+          </svg>
+        </label>
+      </div>
+    
+    </nav>
   </div>
-</nav>
-
-
-
-
+</header>

@@ -22,7 +22,7 @@ export class ListarComponent implements OnInit {
   pageSizeOptions = [5, 10, 15, 20, 50,100];
   
 
-  constructor(private service : FacturaServiceService,
+  constructor(public service : FacturaServiceService,
                       public  dialog:MatDialog) { }
 
   ngOnInit(): void {
@@ -56,7 +56,7 @@ export class ListarComponent implements OnInit {
       this.factura = this.factura.filter(a => a.id !== factura.id);
       this.iniciarPaginador();
       Swal.fire('Eliminado:',
-      `alumno ${factura.nombre} Eliminado con exito`,
+      `Factura ${factura.nombre} Eliminada con exito`,
       'success');
     });
 

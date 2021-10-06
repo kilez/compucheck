@@ -21,7 +21,7 @@ export class CrearComponent implements OnInit {
   folio : string;
   month : string;
 
-  constructor(private service: FacturaServiceService,
+  constructor(public service: FacturaServiceService,
                        private router: Router,) { }
 
 
@@ -29,12 +29,17 @@ export class CrearComponent implements OnInit {
     this.service.listar().subscribe(
       facturas => {
         this.facturas = facturas;
-        this.factura = facturas[facturas.length - 1];
-
-        if(this.factura.secuencia<1)  {
+        //this.factura.secuencia=1;
+        //console.log( facturas.length)
+        // this.factura = facturas[facturas.length - 1];
+        
+        if(this.facturas.length === 0)  {
           this.factura.secuencia=1;
+        }else{
+          this.factura = facturas[facturas.length - 1];
         }
-     
+        
+        
         this.month=this.factura.referencia.substring(2,3);
         this.factura.referencia =this.fecha();
         

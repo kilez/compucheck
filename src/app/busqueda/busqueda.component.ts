@@ -16,7 +16,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 export class BusquedaComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
-    private servicio: FacturaServiceService,
+    public servicio: FacturaServiceService,
             public  dialog:MatDialog) { }
 
 data : Factura[]=[];
@@ -70,7 +70,7 @@ pageSizeOptions = [5, 10, 15, 20, 50,100];
       this.data = this.data.filter(a => a.id !== factura.id);
       this.iniciarPaginador();
       Swal.fire('Eliminado:',
-      `alumno ${factura.nombre} Eliminado con exito`,
+      `Factura ${factura.nombre} Eliminada con exito`,
       'success');
     });
 
@@ -81,7 +81,7 @@ pageSizeOptions = [5, 10, 15, 20, 50,100];
 
    editar(factura:Factura):void{
     const modalRef = this.dialog.open(ModuloEditarComponent,{
-      width:'950px',
+      
       data : {factura: factura}
       
 

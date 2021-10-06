@@ -12,7 +12,8 @@ export class FacturaServiceService {
   constructor(private http : HttpClient) { }
 
 //  private baseEndPoint = 'http://localhost:8091/api';
-private baseEndPoint = 'http://localhost:8080';
+//private baseEndPoint = 'http://localhost:8080';
+private baseEndPoint ='https://compuchecked.herokuapp.com';
   private cabeceras :  HttpHeaders = new HttpHeaders();
 
   public listar():Observable<Factura[]>{

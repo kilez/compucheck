@@ -1,104 +1,99 @@
 
-<div class="card text-dark bg-light mb-15">
-<h1 mat-dialog-title class="dark" > Factura : {{factura.referencia}} </h1>
 
-<div mat-dialog-content>
-    <p>Fecha : {{factura.fecha | date : 'mediumDate'}}</p>
-</div>
-<div class="card-body">
-<form class="row g-3  ">
-
-    <div class="col-auto">
-      <label  >Nombre:</label>
-      <input type="text" class="form-control" name="nombre" id="nombre" [(ngModel)]="factura.nombre" >
-    </div>
-
-    <div class="col">
-        <label >Direccion:</label>
-        <input type="text" class="form-control" id="direccion"
+<div class="card text-dark bg-light mb-2">
+  <h5 mat-dialog-title class="dark"> Factura : {{factura.referencia}} </h5>
+  <div mat-dialog-content>
+  </div>
+  <div class="card-body">
+    <form class="row g-3  ">
+      <div class="col-auto">
+        <label>Nombre:</label>
+        <input type="text" class="form-control" 
+        name="nombre" id="nombre" [(ngModel)]="factura.nombre"
+          style=" padding: 6px 20px;">
+      </div>
+      <div class="col">
+        <label>Direccion:</label>
+        <input type="text" class="form-control" id="direccion" 
         name="direccion" [(ngModel)]="factura.direccion"
-        style=" padding: 6px 20px;">
-    </div>
-    <div class="col-auto">
-      <label  >Telefono: </label>
-      <input type="text" class="form-control" id="telefono"
-      name="telefono" style=" padding: 6px 20px;"
-      [(ngModel)]="factura.telefono">
-    </div>
-    
-  </form>
- <br>
-  <form class="row g-3 ">
+          style=" padding: 6px 20px;">
+      </div>
+      <div class="col-auto">
+        <label>Telefono: </label>
+        <input type="text" class="form-control" 
+        id="telefono" name="telefono" style=" padding: 6px 20px;"
+          [(ngModel)]="factura.telefono">
+      </div>
+    </form>
 
-    <div class="col-auto">
-      <label >Vehiculo:</label>
-      <input type="vehiculo" class="form-control" name="vehiculo"
-      id="vehiculo" [(ngModel)]="factura.vehiculo" >
-    </div>
-  
-    <div class="col-auto">
-        <label  >Marca:</label>
-        <input type="marca" class="form-control" id="marca" 
-        name="marca" style=" padding: 6px 20px;" 
-        [(ngModel)]="factura.marca">
-    </div>
-    <div class="col-auto">
-      <label style="color:white;" >Motor</label>
-      <input type="motor" class="form-control" id="motor" name="motor"
-      style=" padding: 6px 20px;" [(ngModel)]="factura.motor">
-    </div>
+    <form class="row g-3 ">
+      <div class="col-auto">
+        <label>Vehiculo:</label>
+        <input type="vehiculo" class="form-control" 
+        name="vehiculo" id="vehiculo" [(ngModel)]="factura.vehiculo"
+        style=" padding: 6px 10px;">
+      </div>
+      <div class="col-auto">
+        <label>Marca:</label>
+        <input type="marca" class="form-control" 
+        id="marca" name="marca" style=" padding: 6px 10px;"
+          [(ngModel)]="factura.marca">
+      </div>
+      <div class="col-auto">
+        <label style="">Motor</label>
+        <input type="motor" class="form-control" id="motor"
+         name="motor" style=" padding: 6px 10px;"
+          [(ngModel)]="factura.motor">
+      </div>
+      <div class="col-auto">
+        <label>Año:</label>
+        <input type="ano" class="form-control"
+         id="ano" name="ano" [(ngModel)]="factura.ano"
+          style=" padding: 6px 10px;">
+      </div>
+    </form>
 
-    <div class="col-auto">
-      <label  >Año:</label>
-      <input type="ano" class="form-control" id="ano" name="ano"
-      [(ngModel)]="factura.ano"  style=" padding: 6px 20px;">
-    </div>
-    
-  </form>
-  <br>
-  <form class="row g-3 ">
+    <form class="row g-3 ">
 
-    <div class="col-auto">
-      <label  >Placas:</label>
-      <input type="placas" class="form-control" id="placas" name="placas"
-      [(ngModel)]="factura.placas" >
-    </div>
-  
-    <div class="col-auto">
-        <label  >Falla:</label>
-        <input type="falla" class="form-control" id="falla" name="falla"
-        [(ngModel)]="factura.falla" style=" padding: 6px 20px;">
+      <div class="col-auto">
+        <label>Placas:</label>
+        <input type="placas" class="form-control" id="placas" name="placas" [(ngModel)]="factura.placas">
+      </div>
 
-    </div>
-    <div class="col">
-      <label  >Descripcion:</label>
-      <input type="descripcion" class="form-control" id="descripcion" name="descripcion"
-       [(ngModel)]="factura.Descripcion" style=" padding: 6px 20px;">
-    </div>
-    
-  </form>
-  
-  <br>
-  <form class="row g-3 ">
+      <div class="col-auto">
+        <label>Falla:</label>
+        <input type="falla" class="form-control" id="falla" name="falla" [(ngModel)]="factura.falla"
+          style=" padding: 6px 20px;">
 
-    <div class="col">
-      <label  >Diagnostico:</label>
-      <input type="Diagnostico" name="Diagnostico" class="form-control" id="Diagnostico" 
-      [(ngModel)]="factura.Diagnostico" >
-    </div>
-  
-    <div class="col">
-        <label >Solucion:</label>
-        <input type="solucion" name="solucion" 
-        [(ngModel)]="factura.solucion" class="form-control" id="solucion"style=" padding: 6px 20px;">
-    </div>
-    
-  </form>
+      </div>
+      <div class="col">
+        <label>Descripcion:</label>
+        <input type="descripcion" class="form-control" id="descripcion" name="descripcion"
+          [(ngModel)]="factura.Descripcion" style=" padding: 6px 20px;">
+      </div>
+
+    </form>
 
 
-<div mat-dialog-actions>
-    <button mat-button (click)="cancelar()">Cancelar</button>
-    <button mat-button [mat-dialog-close]="factura">Enviar</button>
-</div>
-</div>
+    <form class="row g-3 ">
+
+      <div class="col">
+        <label>Diagnostico:</label>
+        <textarea type="Diagnostico" rows="3" name="Diagnostico" class="form-control" id="Diagnostico"
+          [(ngModel)]="factura.Diagnostico"></textarea>
+      </div>
+
+      <div class="col">
+        <label>Solucion:</label>
+        <textarea type="solucion" rows="3" name="solucion" [(ngModel)]="factura.solucion" class="form-control"
+          id="solucion" style=" padding: 6px 20px;">
+        </textarea>
+      </div>
+    </form>
+
+    <div mat-dialog-actions>
+      <button mat-button (click)="cancelar()">Cancelar</button>
+      <button mat-button [mat-dialog-close]="factura">Enviar</button>
+    </div>
+  </div>
 </div>
