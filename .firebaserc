@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "compu-check",
+    "compucheck": "compu-check",
+    "compu": "compucheck-6f28d"
+  },
+  "targets": {}
+}
